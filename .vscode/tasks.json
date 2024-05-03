@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Quartz - Build-Serve",
+      "command": ["rm -rf node_modules && rm -rf public && npm ci && npx quartz build --serve"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts"
+    },
+    {
+      "type": "npm",
+      "script": "check",
+      "problemMatcher": [],
+      "label": "npm: check",
+      "detail": "tsc --noEmit && npx prettier . --check"
+    },
+    {
+      "type": "shell",
+      "label": "prettier",
+      "command": ["npx prettier . --write"]
+    }
+  ]
+}
