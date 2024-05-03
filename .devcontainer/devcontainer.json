@@ -1,0 +1,17 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "Quartz Container",
+  "build": {
+    "dockerfile": "../Dockerfile",
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "george-alisson.html-preview-vscode",
+      ],
+    },
+  },
+  // "remoteUser": "node"
+}
