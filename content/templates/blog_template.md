@@ -1,7 +1,7 @@
 ---
-title: DevLog ### - 
-description: 
-aliases: 
-tags: 
-date: 
+title: DevLog 000 -
+description:
+aliases:
+tags:
+date:
 ---
