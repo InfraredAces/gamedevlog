@@ -8,6 +8,12 @@
       "problemMatcher": []
     },
     {
+      "type": "shell",
+      "label": "Quartz - Rebuild-Serve",
+      "command": ["rm -rf public && npx quartz build --serve"],
+      "problemMatcher": []
+    },
+    {
       "type": "npm",
       "script": "test",
       "group": {
@@ -28,7 +34,8 @@
     {
       "type": "shell",
       "label": "prettier",
-      "command": ["npx prettier . --write"]
+      "command": ["npx prettier . --write"],
+      "problemMatcher": []
     }
   ]
 }
