@@ -1,8 +1,7 @@
 ---
-title:
-description:
-aliases: []
-tags: []
-draft: true
-date:
+title: DevLog 000 - 
+description: 
+aliases: 
+tags: 
+date: 
 ---
