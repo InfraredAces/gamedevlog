@@ -5,10 +5,7 @@
       "type": "shell",
       "label": "Quartz - Build-Serve",
       "command": ["rm -rf node_modules && rm -rf public && npm ci && npx quartz build --serve"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "problemMatcher": []
     },
     {
       "type": "npm",
