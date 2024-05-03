@@ -12,6 +12,24 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+var explorerComponent = Component.Explorer({
+  sortFn: (a, b) => {
+    if ((!a.file && !b.file) || (a.file && b.file)) {
+      return a.displayName.localeCompare(b.displayName)
+    }
+    if (a.file && !b.file) {
+      return -1
+    } else {
+      return 1
+    }
+  },
+  filterFn: (node) => {
+    // set containing names of everything you want to filter out
+    const omit = new Set([""])
+    return !omit.has(node.name.toLowerCase())
+  },
+})
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -25,20 +43,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(
-      Component.Explorer({
-        sortFn: (a, b) => {
-          if ((!a.file && !b.file) || (a.file && b.file)) {
-            return a.displayName.localeCompare(b.displayName)
-          }
-          if (a.file && !b.file) {
-            return -1
-          } else {
-            return 1
-          }
-        },
-      }),
-    ),
+    Component.DesktopOnly(explorerComponent),
   ],
   right: [
     Component.Graph(),
@@ -55,20 +60,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(
-      Component.Explorer({
-        sortFn: (a, b) => {
-          if ((!a.file && !b.file) || (a.file && b.file)) {
-            return a.displayName.localeCompare(b.displayName)
-          }
-          if (a.file && !b.file) {
-            return -1
-          } else {
-            return 1
-          }
-        },
-      }),
-    ),
+    Component.DesktopOnly(explorerComponent),
   ],
   right: [],
 }
