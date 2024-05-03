@@ -1,5 +1,30 @@
+import { color } from "d3"
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+
+var palette = {
+  themeDarker: "#470047",
+  themeDark: "#610061",
+  themeDarkAlt: "#730073",
+  themePrimary: "#800080",
+  themeSecondary: "#8f118f",
+  themeTertiary: "#b347b3",
+  themeLight: "#d998d9",
+  themeLighter: "#ebc5eb",
+  themeLighterAlt: "#faf0fa",
+  black: "#000000",
+  neutralDark: "#201f1e",
+  neutralPrimary: "#323130",
+  neutralPrimaryAlt: "#3b3a39",
+  neutralSecondary: "#605e5c",
+  neutralTertiary: "#a19f9d",
+  white: "#ffffff",
+  neutralTertiaryAlt: "#c8c6c4",
+  neutralQuaternaryAlt: "#e1dfdd",
+  neutralLight: "#edebe9",
+  neutralLighter: "#f3f2f1",
+  neutralLighterAlt: "#faf9f8",
+}
 
 /**
  * Quartz 4.0 Configuration
@@ -28,24 +53,24 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: palette.white,
+          lightgray: palette.neutralLight,
+          gray: palette.neutralDark,
+          darkgray: palette.neutralPrimary,
+          dark: palette.themePrimary,
+          secondary: palette.themeSecondary,
+          tertiary: palette.themeTertiary,
+          highlight: palette.neutralLighterAlt,
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: palette.neutralDark,
+          lightgray: palette.neutralSecondary,
+          gray: palette.neutralLight,
+          darkgray: palette.themeLighterAlt,
+          dark: palette.themeLight,
+          secondary: palette.themeLight,
+          tertiary: palette.themeTertiary,
+          highlight: palette.neutralPrimary,
         },
       },
     },
