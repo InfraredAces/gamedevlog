@@ -41,7 +41,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "infraredaces.github.io/devlog",
-    ignorePatterns: ["private", "templates", ".obsidian", "assets"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
