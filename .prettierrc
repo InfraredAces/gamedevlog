@@ -1,7 +1,11 @@
 {
-  "printWidth": 100,
+  "printWidth": 120,
+  "proseWrap": "always",
   "quoteProps": "as-needed",
   "trailingComma": "all",
   "tabWidth": 2,
-  "semi": false
+  "useTabs": false,
+  "semi": false,
+  "endOfLine": "lf",
+  "parser":"markdown"
 }
