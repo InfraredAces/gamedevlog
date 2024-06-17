@@ -1,5 +1,5 @@
 ---
-title: DevLog 000 -
+title: Post Title -
 description:
 aliases:
 tags:
